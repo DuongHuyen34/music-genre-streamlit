@@ -33,3 +33,7 @@ The project is based on the **GTZAN music genre dataset** and includes models tr
    ```bash
    streamlit run app.py
    ```
+
+
+Watch the demo of the app:
+Click [here to watch the demo](/demo.mov).
