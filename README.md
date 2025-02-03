@@ -18,6 +18,10 @@ The project is based on the **GTZAN music genre dataset** and includes models tr
 
 └── **requirements.txt**: Lists all dependencies needed to run the project. 
 
+### How the App Works:
+- The audio file is broken down into 6-second segments.
+- Each segment undergoes a separate classification.
+- The final genre prediction is made by taking the majority vote of the classifications from all segments.
 
 ### Model Details:
 - **CNN Model**: A lightweight, efficient model with 2MB size, ideal for real-time inference in the Streamlit app.
@@ -34,6 +38,10 @@ The project is based on the **GTZAN music genre dataset** and includes models tr
    streamlit run app.py
    ```
 
+Example of Genre Prediction:
+Here’s an example of how the app predicts the genre of a song after analyzing a 6-second segment.
+
+![Genre Prediction Example](./demo_img.png)
 
 Watch the demo of the app:
 Click [here to watch the demo](/demo.mov).
