@@ -41,7 +41,7 @@ The project is based on the **GTZAN music genre dataset** and includes models tr
 Example of Genre Prediction:
 Here’s an example of how the app predicts the genre of a song after analyzing a 6-second segment.
 
-![Genre Prediction Example](./demo_img.png)
+![Genre Prediction Example](./assets/demo_img.png)
 
 Watch the demo of the app:
-Click [here to watch the demo](/demo.mov).
+Click [here to watch the demo](./assetsdemo.mov).
