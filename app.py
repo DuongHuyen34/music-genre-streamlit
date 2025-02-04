@@ -7,7 +7,8 @@ import streamlit as st
 import torch.nn as nn
 from collections import Counter
 import torch.nn.functional as F
-from model import GenreClassifier
+from models.GenreClassifier import GenreClassifier
+
 SAMPLE_RATE = 22050 
 n_mfcc = 13  
 n_fft = 2048 
@@ -62,7 +63,7 @@ def process_audio_and_predict(file, model):
 
 def app():
     st.title("Audio Genre Prediction App")
-    model = load_model('cnn_model.pth')
+    model = load_model('./models/cnn_model.pth')
 
     st.sidebar.title("Upload Audio File")
     audio_file = st.sidebar.file_uploader("Choose an audio file", type=["wav", "mp3"])
