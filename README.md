@@ -54,8 +54,8 @@ The project is based on the **GTZAN music genre dataset** and includes models tr
 ## 🛠 How to Run the App
 1. **Clone the repository**
    ```bash
-   git clone <repo_link>
-   cd <repo_folder>
+   git clone https://github.com/bakalianosm/Music-Genre-Classification.git
+   cd Music-Genre-Classification
    ```
 2. **Install dependencies**
    ```bash
