@@ -84,4 +84,4 @@ Here’s an example of how the app predicts the genre of a song by analyzing its
 
 
 Watch the demo of the app:
-Click [here to watch the demo](./assetsdemo.mov).
+Click [here to watch the demo](./assets/demo.mov).
