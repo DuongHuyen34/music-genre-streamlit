@@ -19,7 +19,8 @@ The project is based on the **GTZAN music genre dataset** and includes models tr
 ├── models/
 │   ├── cnn_model.pth       # Trained CNN model (2MB)  
 │   ├── GenreClassification.py  # CNN model architecture  
-├── music_classification.ipynb  # Jupyter notebook for training and evaluation  
+├── notebooks/
+│   ├── music_classification.ipynb  # Jupyter notebook for training and evaluation  
 └── requirements.txt        # Dependencies for running the project  
 ```
 
