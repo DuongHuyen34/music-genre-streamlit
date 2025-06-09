@@ -72,9 +72,11 @@ def process_audio_and_predict(file, model):
 
 def app():
 
-    # 🎊 Tích hợp Side Confetti từ tsParticles và particles.html
-    with open("particles.html", "r", encoding="utf-8") as f:
-        particles_html = f.read()
+    # Đọc và nhúng particles.html
+    with open("particles.html", "r", encoding="utf-8") as html_file:
+        particles_html = html_file.read()
+
+    # Nhúng hiệu ứng vào Streamlit
     components.html(particles_html, height=0, width=0)
 
     st.markdown("""
