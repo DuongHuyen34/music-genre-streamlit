@@ -14,6 +14,7 @@ class GenreClassifier(nn.Module):
         self.pool = nn.MaxPool1d(kernel_size=2, stride=2)
 
         # **Calculate output size dynamically**
+        # Tự động tính kích thước đầu vào
         with torch.no_grad():
             sample_input = torch.randn(1, 13, 259)  # (batch_size=1, channels=13, time=259)
             sample_output = self._forward_conv(sample_input)
