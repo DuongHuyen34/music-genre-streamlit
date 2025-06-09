@@ -3,7 +3,7 @@ librosa==0.10.2.post1
 torch==2.2.2
 tqdm==4.67.1
 torchaudio==2.2.2
-matplotlib==3.7.1
+matplotlib
 # -f https://download.pytorch.org/whl/cpu/torch_stable.html
 # streamlit==1.41.1
 # librosa==0.10.2.post1
