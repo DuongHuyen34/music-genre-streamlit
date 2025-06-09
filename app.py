@@ -72,100 +72,10 @@ def process_audio_and_predict(file, model):
 
 def app():
 
-    # 🎊 Tích hợp Side Confetti từ tsParticles
-    components.html("""
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-        <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            background: transparent;
-            overflow: hidden;
-        }
-        #tsparticles-left, #tsparticles-right {
-            position: fixed;
-            top: 0;
-            width: 20vw;
-            height: 100vh;
-            z-index: -1;
-            pointer-events: none;
-        }
-        #tsparticles-left {
-            left: 0;
-        }
-        #tsparticles-right {
-            right: 0;
-        }
-        </style>
-    </head>
-    <body>
-        <div id="tsparticles-left"></div>
-        <div id="tsparticles-right"></div>
-
-        <script>
-        const leftOptions = {
-            emitters: {
-            direction: "right",
-            position: { x: 0, y: 50 },
-            rate: { quantity: 5, delay: 0.2 },
-            size: { width: 0, height: 100 },
-            },
-            particles: {
-            shape: { type: "square" },
-            size: { value: 5 },
-            move: { direction: "right", speed: 3 },
-            opacity: { value: 0.8 },
-            color: { value: ["#ff69b4", "#00ffff", "#ffff00", "#ffffff"] }
-            }
-        };
-
-        const rightOptions = {
-            emitters: {
-            direction: "left",
-            position: { x: 100, y: 50 },
-            rate: { quantity: 5, delay: 0.2 },
-            size: { width: 0, height: 100 },
-            },
-            particles: {
-            shape: { type: "circle" },
-            size: { value: 5 },
-            move: { direction: "left", speed: 3 },
-            opacity: { value: 0.8 },
-            color: { value: ["#ff69b4", "#00ffff", "#ffff00", "#ffffff"] }
-            }
-        };
-
-        tsParticles.load("tsparticles-left", leftOptions);
-        tsParticles.load("tsparticles-right", rightOptions);
-        </script>
-    </body>
-    </html>
-    """, height=0, width=0)
-
-    # st.markdown("""
-    #     <style>
-    #         .animated-bg {
-    #             width: 100%;
-    #             height: 180px;
-    #             background: radial-gradient(circle, rgba(0,255,255,0.15) 1.5px, transparent 1.5px);
-    #             background-size: 20px 20px;
-    #             animation: moveBackground 30s linear infinite;
-    #             margin-bottom: 20px;
-    #             border-radius: 10px;
-    #         }
-
-    #         @keyframes moveBackground {
-    #             0% { background-position: 0 0; }
-    #             100% { background-position: 1000px 1000px; }
-    #         }
-    #     </style>
-
-    #     <div class="animated-bg"></div>
-    # """, unsafe_allow_html=True)
-
+    # 🎊 Tích hợp Side Confetti từ tsParticles và particles.html
+    with open("particles.html", "r", encoding="utf-8") as f:
+        particles_html = f.read()
+    components.html(particles_html, height=0, width=0)
 
     st.markdown("""
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
